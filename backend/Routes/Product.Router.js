@@ -4,10 +4,20 @@ const ProductModel = require('../Model/Product.Model');
 const ProductRouter = express.Router();
 
 ProductRouter.get('/', async (req, res) => {
+  const { search } = req.query;
+  // console.log(search);
+
   try {
-    const data = await ProductModel.find();
-    console.log(data);
-    res.status(200).json({ data });
+    const filter = {};
+
+    if (req.query.search) {
+      filter.name = { $regex: req.query.search, $options: 'i' };
+    }
+
+    console.log(filter);
+
+    const Products = await ProductModel.find(filter);
+    res.status(200).json({ Products });
   } catch (error) {
     res.status(500).json({ Message: error.message });
   }
