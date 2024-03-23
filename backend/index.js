@@ -11,5 +11,5 @@ app.use(cors());
 
 app.listen(process.env.PORT, () => {
   connnectDB();
-  console.log(`Server Running Port on ${process.env.PORT}`);
+  console.log(`Server Running Port  ${process.env.PORT}`);
 });
