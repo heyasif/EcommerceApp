@@ -4,9 +4,6 @@ const ProductModel = require('../Model/Product.Model');
 const ProductRouter = express.Router();
 
 ProductRouter.get('/', async (req, res) => {
-  const { search } = req.query;
-  // console.log(search);
-
   try {
     const filter = {};
 
