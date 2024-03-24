@@ -1,0 +1,38 @@
+* {
+  margin: opx;
+}
+.main {
+  background-color: aliceblue;
+  width: 80%;
+  max-width: 1200px; /* Optional: Limits the maximum width */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Distributes space around items */
+  align-items: flex-start; /* Aligns items at the start */
+  margin: auto; /* Centers the .main container */
+}
+
+.singleProduct {
+  width: 200px;
+  height: 600px;
+  flex: 1 1 20%; /* Adjusts basis to 20% to fit 4 items in a row */
+  margin: 10px;
+  display: flex;
+  flex-direction: column; /* Stacks the product info vertically */
+  align-items: center; /* Centers the content inside each product card */
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  overflow: hidden;
+}
+.imgload {
+  width: 200px;
+}
+.op {
+  width: 80%;
+  flex-direction: column;
+  max-width: 1000px; /* Optional: Limits the maximum width */
+  display: flex;
+  justify-content: space-around; /* Distributes space around items */
+  align-items: center; /* Aligns items at the start */
+  margin: auto; /* Centers the .main container */
+}
